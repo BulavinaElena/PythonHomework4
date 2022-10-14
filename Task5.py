@@ -2,6 +2,8 @@
 # Задача - сформировать файл, содержащий сумму многочленов.
 
 import random
+
+
 def createDict():
     equation={}
     degree=int(input('Введите максимальную степень многочлена: '))
@@ -23,7 +25,7 @@ def createEquation(equation: dict):
                 strEquation+=f'+{v}*x^{k}'
             elif v<0:
                 strEquation+=f'-{abs(v)}*x^{k}'
-        return strEquation
+    return strEquation
 def printEquation(equation: str):
     print(equation.replace('*x^1', 'x').replace('*x^0', '') + ' = 0 ')
 def parseEquation(equation: str):
