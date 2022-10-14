@@ -1,4 +1,4 @@
-# Задача 4. 4.	Задана натуральная степень k. 
+# Задача 4. Задана натуральная степень k. 
 # Сформировать случайным образом список коэффициентов
 # (значения от -100 до 100)
 # многочлена и записать в файл многочлен степени k
@@ -7,6 +7,8 @@
 #  просто пропускаем данную итерацию степени.
 
 import random
+
+
 def createDict():
     equation={}
     degree=int(input('Введите максимальную степень многочлена: '))
@@ -28,7 +30,7 @@ def createEquation(equation: dict):
                 strEquation+=f'+{v}*x^{k}'
             elif v<0:
                 strEquation+=f'-{abs(v)}*x^{k}'
-        return strEquation
+    return strEquation
 def printEquation(equation: str):
     print(equation.replace('*x^1', 'x').replace('*x^0', '') + ' = 0 ')
-print(createEquation(createDict()))
+printEquation(createEquation(createDict()))
